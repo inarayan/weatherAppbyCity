@@ -1,15 +1,17 @@
 
-<div>This is the forecast Page {{city}}</div>
+<div>This is the forecast Page {{city}}
 
-<div ng-repeat="w in weatherResult.list">
+</div>
+<div></div>
+<div ng-repeat="w in weatherResults">
     <div ass="row">
         <div class="'col-md-6">
             <div class="panel panel-success">
                 <div class="panel-heading">
-
+                    {{coverttoDate(w.dt)|date}}
                 </div>
                 <div class="panel-body">
-                    body
+                    Day time Temperature is: {{coverttoFarenheit(w.temp.day)}}
                 </div>
             </div>
         </div>
