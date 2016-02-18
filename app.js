@@ -60,8 +60,21 @@ angular.module('weatherApp',['ngRoute','ngResource'])
 
 
 
-
      }])
+
+
+    //creating a directive
+    .directive('searchResult',function(){
+        return{
+            restrict:E,
+            templateUrl:'search-result.html',
+            replace:true,
+            scope:{
+
+            }
+        };
+    })
+
     //Service
     .service('weatherService',function()
     {

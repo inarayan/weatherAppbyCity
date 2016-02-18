@@ -1,19 +1,20 @@
 
 <div>This is the forecast Page {{city}}
+</div>
+<hr/>
+<a href="#/">Back to Search</a>
+<hr/>
+<div>
+    Days : <a href="#/forecast/2" ng-class={'bg-primary':days==='2'}>2</a>/
+    <a href="#/forecast/5" ng-class={'bg-primary':days==='5'}>5</a>/
+    <a href="#/forecast/7" ng-class={'bg-primary':days==='7'}>7</a>
 
 </div>
-<div></div>
+</hr>
 <div ng-repeat="w in weatherResults">
     <div ass="row">
         <div class="'col-md-6">
-            <div class="panel panel-success">
-                <div class="panel-heading">
-                    {{coverttoDate(w.dt)|date}}
-                </div>
-                <div class="panel-body">
-                    Day time Temperature is: {{coverttoFarenheit(w.temp.day)}}
-                </div>
-            </div>
+            <search-result></search-result>
         </div>
 
     </div>
