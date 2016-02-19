@@ -1,9 +1,8 @@
-
-    <div class="panel panel-success">
+ <div class="panel panel-success">
         <div class="panel-heading">
-            {{coverttoDate(w.dt)|date}}
+            Date is: {{ convert-to-date({dt:weatherDay.dt}) }};
         </div>
         <div class="panel-body">
-            Day time Temperature is: {{coverttoFarenheit(w.temp.day)}}
+            Day time Temperature is: {{convert-to-standard({daytemperature:weatherDay.temp.day})}}
         </div>
     </div>

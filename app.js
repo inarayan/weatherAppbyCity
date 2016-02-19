@@ -66,11 +66,14 @@ angular.module('weatherApp',['ngRoute','ngResource'])
     //creating a directive
     .directive('searchResult',function(){
         return{
-            restrict:E,
+            restrict:'E',
             templateUrl:'search-result.html',
             replace:true,
             scope:{
-
+                    weatherDay:"=",
+                    convertToStandard:"&",
+                    convertToDate:"&",
+                    dateFormat:"@"
             }
         };
     })

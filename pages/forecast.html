@@ -14,7 +14,7 @@
 <div ng-repeat="w in weatherResults">
     <div ass="row">
         <div class="'col-md-6">
-            <search-result></search-result>
+            <search-result weather-day="w" convert-to-standard="coverttoFarenheit(daytemperature)" convert-to-date="coverttoDate(dt)"></search-result>
         </div>
 
     </div>
